@@ -547,6 +547,12 @@ legend("top", fill = c("black","gray","red","blue"),
 dev.off()
 
 
+## Valence Shifters - Polarized Words
+library(sentimentr)
+sentiment_attributes(data$tweet)
+sentiment_attributes(data2$tweet)
+sentiment_attributes(subset(data,data$RT==TRUE)$tweet)
+
 sessionInfo() # see GitHub Repo
 
 ### END ###
